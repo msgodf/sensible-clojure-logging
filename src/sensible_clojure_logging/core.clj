@@ -7,11 +7,14 @@
 (defn -main
   [& args]
   (start-logging! {:level :info
-                   :console true
+                   :console false
                    :appenders [{:appender :file
                                 :encoder :pattern
-                                :pattern "%p [%d] %t - %c %m%n"
+                                :pattern "%p [%d] %t - {%mdc} - %c %m%n"
                                 :file "output.log"}
+                               {:appender :console
+                                :encoder :pattern
+                                :pattern "%p [%d] %t - {%mdc} - %c %m%n"}
                                {:appender :file
                                 :encoder :json
                                 :file "output-json.log"}]})
