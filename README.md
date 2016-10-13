@@ -18,3 +18,7 @@ INFO [2016-10-13 10:39:09,119] main - {arguments=} - sensible-clojure-logging.co
 ```
 
 This output will also be written to a file `output.log`, and as JSON to `output-json.log`.
+
+## What is MDC?
+
+MDC stands for Mapped Diagnostic Context, effectively a list of key value pairs associated with a given thread-local context. You can read more about it in the relevant chapter of the [Logback documentation](http://logback.qos.ch/manual/mdc.html).
